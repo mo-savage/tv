@@ -367,3 +367,236 @@ html {
         width: 100%;
     }
 }
+/* Title row with season badge */
+.title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.title-row .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--colour-text);
+    word-break: break-word;
+}
+
+.season-badge {
+    display: inline-block;
+    background-color: var(--colour-primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Inline edit form */
+.edit-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--colour-border);
+}
+
+.edit-form .form-group {
+    margin-bottom: 0;
+}
+
+.edit-form .form-group label {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+}
+
+.edit-form input,
+.edit-form select {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+}
+
+.edit-form .edit-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+}
+
+.btn-save {
+    background-color: var(--colour-success);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #449d44;
+}
+
+.btn-cancel {
+    background-color: var(--colour-text-light);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #555;
+}
+
+/* Card actions layout */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid var(--colour-bg);
+    padding-top: 12px;
+    margin-top: 5px;
+}
+
+.card-actions label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--colour-text-light);
+}
+
+.card-actions select {
+    padding: 5px 10px;
+    border: 1px solid var(--colour-border);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    flex: 1;
+    min-width: 120px;
+}
+
+.btn-edit {
+    background-color: var(--colour-info);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+    background-color: #46b8da;
+}
+
+/* Form grid */
+.form-section form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 15px;
+}
+
+.form-group:nth-child(4) {
+    grid-column: 1;
+}
+
+.btn-primary {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-section form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group:nth-child(4) {
+        grid-column: 1;
+    }
+    
+    .btn-primary {
+        grid-column: 1;
+        width: 100%;
+    }
+    
+    .title-row {
+        align-items: center;
+    }
+    
+    .edit-form {
+        grid-template-columns: 1fr;
+    }
+}
+/* Title row with season badge */
+.title-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.title-row .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--colour-text);
+    word-break: break-word;
+}
+
+.season-badge {
+    display: inline-block;
+    background-color: var(--colour-primary);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Form grid now has 4 fields */
+.form-section form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 15px;
+}
+
+.form-group:nth-child(4) {
+    grid-column: 1;
+}
+
+.btn-primary {
+    grid-column: 1 / -1;
+    justify-self: start;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-section form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group:nth-child(4) {
+        grid-column: 1;
+    }
+    
+    .btn-primary {
+        grid-column: 1;
+        width: 100%;
+    }
+    
+    .title-row {
+        align-items: center;
+    }
+}
