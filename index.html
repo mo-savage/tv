@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TV Series Tracker</h1>
+            <p>Keep track of what you're watching and where to find it</p>
+        </header>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-controls">
+                <label for="statusFilter">Filter by status:</label>
+                <select id="statusFilter">
+                    <option value="Active" selected>Active</option>
+                    <option value="Watchlist">Watchlist</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Shelved">Shelved</option>
+                    <option value="All">Show All</option>
+                </select>
+            </div>
+            <button type="button" id="addNewBtn" class="btn-add-new">+ Add New</button>
+        </section>
+
+        <!-- Series List -->
+        <section class="list-section">
+            <h2>My Series</h2>
+            <div id="seriesList" class="series-grid">
+                <!-- Series cards will be inserted here by JavaScript -->
+            </div>
+            <p id="emptyMessage" class="empty-message" style="display: none;">No series found for this status.</p>
+        </section>
+
+        <!-- Add New Series Form -->
+        <section class="form-section" id="addFormSection">
+            <h2>Add New Series</h2>
+            <form id="addSeriesForm">
+                <div class="form-group">
+                    <label for="seriesTitle">Series Title</label>
+                    <input type="text" id="seriesTitle" placeholder="e.g. Breaking Bad" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="seriesChannel">Channel / Streaming Service</label>
+                    <input type="text" id="seriesChannel" placeholder="e.g. Netflix, BBC One" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="seriesStatus">Status</label>
+                    <select id="seriesStatus">
+                        <option value="Active">Active</option>
+                        <option value="Watchlist" selected>Watchlist</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Shelved">Shelved</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn-primary">Add Series</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
